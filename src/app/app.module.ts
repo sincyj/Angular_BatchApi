@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { BatchComponent } from './batch/batch.component';
+import { BatchService } from './batch.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BatchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [BatchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
